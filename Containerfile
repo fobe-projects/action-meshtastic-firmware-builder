@@ -20,7 +20,7 @@ ENV PLATFORMIO_WORKSPACE_DIR=/pio/workspace
 
 # Gather PlatformIO dependencies in a separate stage
 FROM base AS pio_deps
-ARG DEPS_FROM_REPO="https://github.com/meshtastic/firmware.git"
+ARG DEPS_FROM_REPO="https://github.com/fobe-projects/meshtastic-firmware.git"
 ARG DEPS_FROM_REF="master"
 ARG PIO_PLATFORM
 

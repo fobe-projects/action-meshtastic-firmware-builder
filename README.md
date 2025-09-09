@@ -1,10 +1,10 @@
-# gh-action-firmware
+# action-meshtastic-firmware-builder
 Build Meshtastic firmware in an Action-container
 
 
 ## Usage
 
-This action is meant to be used with [meshtastic/firmware](https://github.com/meshtastic/firmware) or forks.
+This action is meant to be used with [fobe-projects/meshtastic-firmware](https://github.com/fobe-projects/meshtastic-firmware).
 
 
 ### Example workflow
@@ -24,12 +24,12 @@ jobs:
         run: echo "long=$(./bin/buildinfo.py long)" >> $GITHUB_OUTPUT
         id: version
 
-      - name: Build T-Echo
+      - name: Build FoBE Quill nRF52840 Mesh
         id: build
-        uses: meshtastic/gh-action-firmware@main
+        uses: fobe-projects/action-meshtastic-firmware-builder@main
         with:
           pio_platform: nrf52
-          pio_env: t-echo
+          pio_env: fobe_quill_nrf52840_mesh
           pio_target: build
 
       - name: Store binaries as an artifact

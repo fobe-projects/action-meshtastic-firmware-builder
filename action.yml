@@ -1,6 +1,6 @@
 name: Setup Build Variant Composite Action
 description: Variant build actions for Meshtastic PlatformIO steps
-author: meshtastic
+author: FoBE Studio
 
 inputs:
   pio_platform:
@@ -37,7 +37,7 @@ runs:
           --env MT_OTA_FIRMWARE_TARGET \
           --env PLATFORMIO_BUILD_DIR \
           -v $GITHUB_WORKSPACE:/workspace \
-          ghcr.io/meshtastic/gh-action-firmware:master-${{ inputs.pio_platform }}
+          ghcr.io/fobe-projects/action-meshtastic-firmware-builder:master-${{ inputs.pio_platform }}
       shell: bash
       env:
         MT_ENV: ${{ inputs.pio_env }}
